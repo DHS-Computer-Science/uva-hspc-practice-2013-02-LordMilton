@@ -13,7 +13,8 @@ public class Main{
       }
       return false;
    }
-   public static void main(String[] args) {
+   public static void main(String[] args) throws Exception {
+      //Scanner scan = new Scanner(new java.io.File("X:\\Git\\Git\\GitPortable\\Data\\home\\201302\\in-out\\judging.in"));
       Scanner scan = new Scanner(System.in);
       int towers = scan.nextInt();
       for(int i = 1; i <= towers; i++)
@@ -22,7 +23,7 @@ public class Main{
          int height = scan.nextInt();
          for(int j = 0; j < height; j++)
          {
-            int nextRow = scan.nextInt();
+            int nextRow = scan.nextInt(); scan.nextLine();
             int[] nextRowArr = new int[3];
             nextRowArr[0] = nextRow/100;
             nextRowArr[1] = (nextRow/10)%10;
