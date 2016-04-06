@@ -22,13 +22,13 @@ public class Main{
          int height = scan.nextInt();
          for(int j = 0; j < height; j++)
          {
-            int[] nextRow = new int[3];
-            for(int k = 0; k < 3; k++)
-            {
-               nextRow[k] = Character.getNumericValue(scan.nextChar());
-            }
+            int nextRow = scan.nextInt();
+            int[] nextRowArr = new int[3];
+            nextRowArr[0] = nextRow/100;
+            nextRowArr[1] = (nextRow/10)%10;
+            nextRowArr[2] = nextRow%10;
             if(!fallen)
-               fallen = isFallen(nextRow);
+               fallen = isFallen(nextRowArr);
          }
          if(fallen)
             System.out.println("Case "+ i +": Fallen");
